@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection(){
     return(
-        <div className=" relative w-full px-2">
+        <section className=" relative w-full px-2">
             
             {/* محتوای اصلی */}
             <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 py-16 px-5">
@@ -31,6 +31,6 @@ export default function HeroSection(){
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
