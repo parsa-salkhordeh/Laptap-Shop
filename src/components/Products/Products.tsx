@@ -21,6 +21,7 @@ export default async function Products() {
   }
 
   return (
+   <main>
     <section>
       {/* Hero */}
       <div className="flex justify-center font-bold text-2xl bg-gray-100 p-3 text-black">
@@ -58,7 +59,7 @@ export default async function Products() {
 
               <div className="mt-4 flex gap-2">
                 <Link
-                  href=""
+                  href={`/Products/${product._id}`}
                   className="flex-1 rounded-xl border border-gray-300 py-2 text-center text-sm font-semibold text-gray-700 transition hover:border-blue-600 hover:bg-blue-600 hover:text-white"
                 >
                   جزئیات
@@ -76,5 +77,6 @@ export default async function Products() {
         ))}
       </div>
     </section>
+    </main>
   );
 }
