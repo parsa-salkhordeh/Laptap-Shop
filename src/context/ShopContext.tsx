@@ -9,7 +9,7 @@ import { createContext } from "react";
 export const ShopContext=createContext<null>(null);
 
 export default function ShopProvider({children}){
-    <ShopContext.Provider>
+    <ShopContext.Provider value={null}>
         {children}
     </ShopContext.Provider>
 }
