@@ -30,7 +30,7 @@ export default async function ProductDetails({
   return (
     <main className="min-h-screen bg-gray-50 px-4 py-10">
       <section className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-3xl bg-white shadow-sm md:flex-row">
-        <div className="flex w-full items-center justify-center bg-gray-100 p-8 md:w-1/2">
+        <div className="flex w-full items-center justify-center p-8 md:w-1/2">
           <Image
             src={data.image}
             alt={data.name}
