@@ -2,6 +2,7 @@ import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
+import BuyBtn from "./BuyBtn";
 
 interface Product {
   image: string;
@@ -11,6 +12,7 @@ interface Product {
 }
 
 export default async function Products() {
+
   let data: Product[] = [];
 
   try {
@@ -65,12 +67,7 @@ export default async function Products() {
                   جزئیات
                 </Link>
 
-                <button
-                  type="button"
-                  className="flex-1 rounded-xl bg-gray-900 py-2 text-sm font-semibold text-white transition hover:bg-green-600 cursor-pointer"
-                >
-                  خرید
-                </button>
+                <BuyBtn/>
               </div>
             </div>
           </div>
