@@ -55,7 +55,7 @@ export default function Header() {
         {/* سبد خرید */}
       </ul>
 
-      <div className="hover:text-blue-500  mx-8 md:mx-2">
+       <div className="hover:text-blue-500  mx-8 md:mx-2">
         <Link className="relative" href="/cart">
           {/* استفاده از کتابخونه Font Awesome */}
           <FontAwesomeIcon icon={faCartShopping} className="text-2xl" />
@@ -66,8 +66,7 @@ export default function Header() {
       </div>
 
       {/* برای باز کردن منوی موبایل */}
-      <Link
-        href="/cart"
+      <div
         onClick={() => setOpen(!isOpen)}
         className="p-2 absolute left-10 top-3 md:hidden cursor-pointer"
       >
@@ -75,7 +74,7 @@ export default function Header() {
           icon={isOpen ? faXmark : faBars}
           className="text-3xl"
         />
-      </Link>
+      </div>
     </header>
   );
 }
