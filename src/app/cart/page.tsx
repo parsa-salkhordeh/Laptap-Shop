@@ -14,9 +14,9 @@ export default function Cart() {
   return (
     <div className="mx-auto mt-8 max-w-4xl px-4">
       <div className="space-y-4">
-        {cart.map((c) => (
+        {cart.map((c ,index) => (
           <div
-            key={c._id}
+            key={`${c._id}-${index}`}
             className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
           >
             {/* تصویر محصول */}
