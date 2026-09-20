@@ -1,9 +1,15 @@
-export default function BuyBtn() {
+"use client"
+import { ShopContext } from "@/context/ShopContext";
+import { useContext } from "react";
+
+export default function BuyBtn({product}) {
+  const context = useContext(ShopContext);
+  console.log(context)
   return (
     <button
       type="button"
       className="flex-1 rounded-xl bg-gray-900 py-2 text-sm font-semibold text-white transition hover:bg-green-600 cursor-pointer"
-      onClick={() => {}}
+      onClick={()=> context?.addToCard(product)}
     >
       خرید
     </button>

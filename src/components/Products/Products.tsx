@@ -67,7 +67,7 @@ export default async function Products() {
                   جزئیات
                 </Link>
 
-                <BuyBtn/>
+                <BuyBtn product={product}/>
               </div>
             </div>
           </div>
