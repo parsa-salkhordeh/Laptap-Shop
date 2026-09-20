@@ -66,7 +66,8 @@ export default function Header() {
       </div>
 
       {/* برای باز کردن منوی موبایل */}
-      <div
+      <Link
+        href="/cart"
         onClick={() => setOpen(!isOpen)}
         className="p-2 absolute left-10 top-3 md:hidden cursor-pointer"
       >
@@ -74,7 +75,7 @@ export default function Header() {
           icon={isOpen ? faXmark : faBars}
           className="text-3xl"
         />
-      </div>
+      </Link>
     </header>
   );
 }
