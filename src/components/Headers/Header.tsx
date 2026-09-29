@@ -1,21 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
-  faComputer,
+   faUser,
   faEnvelope,
   faCircleInfo,
   faBars,
   faXmark,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import { ShopContext } from "@/context/ShopContext";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const {cart}=useContext(ShopContext)
   return (
     <header className="mt-5 relative flex bg-gray-100 p-5">
       <div className="flex">
@@ -38,11 +40,6 @@ export default function Header() {
         </li>
 
         <li className="hover:text-blue-500">
-          <FontAwesomeIcon icon={faComputer} className="px-2" />
-          <Link href="/products">محصولات</Link>
-        </li>
-
-        <li className="hover:text-blue-500">
           <FontAwesomeIcon icon={faEnvelope} className="px-2" />
           <Link href="/contact">ارتباط با ما</Link>
         </li>
@@ -54,13 +51,19 @@ export default function Header() {
 
         {/* سبد خرید */}
       </ul>
+      
+      {/* برای ثبت نام */}
+      <Link href={"/signup"} className="mr-4 md:ml-15 flex items-center gap-2 cursor-pointer hover:text-blue-500">
+        <FontAwesomeIcon icon={faUser} className="text-2xl" />
+        <span className="text-blue-500 mt-1">ثبت نام</span>
+      </Link>
 
-       <div className="hover:text-blue-500  mx-8 md:mx-2">
+       <div className="hover:text-blue-500 mr-8 md:mr-0 md:mx-2">
         <Link className="relative" href="/cart">
           {/* استفاده از کتابخونه Font Awesome */}
           <FontAwesomeIcon icon={faCartShopping} className="text-2xl" />
           <span className=" text-white px-1 rounded-2xl ml-0 absolute left-7 bg-red-600">
-            0
+            {cart.length}
           </span>
         </Link>
       </div>
