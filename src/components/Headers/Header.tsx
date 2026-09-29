@@ -48,17 +48,15 @@ export default function Header() {
           <FontAwesomeIcon icon={faCircleInfo} className="px-2" />
           <Link href="/about">درباره ما</Link>
         </li>
-
-        {/* سبد خرید */}
       </ul>
       
       {/* برای ثبت نام */}
-      <Link href={"/signup"} className="mr-4 md:ml-15 flex items-center gap-2 cursor-pointer hover:text-blue-500">
+      <Link href={"/signup"} className="mr-4 md:ml-15 flex items-center gap-2 cursor-pointer  hover:text-blue-500">
         <FontAwesomeIcon icon={faUser} className="text-2xl" />
         <span className="text-blue-500 mt-1">ثبت نام</span>
       </Link>
-
-       <div className="hover:text-blue-500 mr-8 md:mr-0 md:mx-2">
+         {/* سبد خرید */}
+       <div className="hover:text-blue-500 mr-8 md:mr-0 md:mx-2 mt-0 sm:mt-2">
         <Link className="relative" href="/cart">
           {/* استفاده از کتابخونه Font Awesome */}
           <FontAwesomeIcon icon={faCartShopping} className="text-2xl" />
