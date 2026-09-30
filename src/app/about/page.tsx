@@ -19,7 +19,7 @@ export default function AboutPage() {
 
       {/* عکس‌ها و نوشته‌ها */}
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-8  md:items-start">
+      <div className="mx-auto flex max-w-6xl flex-col md:flex-row items-center gap-8  md:items-start">
         {/* عکس راست */}
         <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-lg md:mt-12">
           <Image
