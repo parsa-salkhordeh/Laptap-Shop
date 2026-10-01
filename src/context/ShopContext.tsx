@@ -25,7 +25,8 @@ export default function ShopProvider({
   const [cart, setCart] = useState<Product[]>([]);
 
   function addToCard(product: Product) {
-    setCart((prev) => [...prev, product]);
+    setCart((prev) => [...prev, product]
+    );
 
     toast.success("محصول به سبد خرید اضافه شد");
   }

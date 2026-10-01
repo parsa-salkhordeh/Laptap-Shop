@@ -51,7 +51,7 @@ export default function Header() {
       </ul>
       
       {/* برای ثبت نام */}
-      <Link href={"/signup"} className="mr-4 md:ml-15 flex items-center gap-2 cursor-pointer  hover:text-blue-500">
+      <Link href="/signup" className="mr-4 md:ml-15 flex items-center gap-2 cursor-pointer  hover:text-blue-500">
         <FontAwesomeIcon icon={faUser} className="text-2xl" />
         <span className="text-blue-500 mt-1">ثبت نام</span>
       </Link>
