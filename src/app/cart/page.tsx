@@ -7,16 +7,16 @@ export default function Cart() {
   const { cart, deleteCart } = useContext(ShopContext);
   if (cart.length == 0)
     return (
-      <h1 className="bg-gray-100 mt-5 h-90 text-center pt-45 font-bold">
+      <h1 className="bg-gray-100 mt-5 text-center pt-45 font-bold h-126">
         سبد خرید خالی است
       </h1>
     );
   return (
-    <div className="mx-auto mt-8 max-w-4xl px-4">
+    <div className="mx-auto mt-8 max-w-4xl px-4 h-126">
       <div className="space-y-4">
-        {cart.map((c ,index) => (
+        {cart.map((c) => (
           <div
-            key={`${c._id}-${index}`}
+            key={c._id}
             className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
           >
             {/* تصویر محصول */}
