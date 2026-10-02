@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import toast from "react-hot-toast";
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,10 +25,11 @@ export default function SignupPage() {
     const data = await response.json();
 
     if (response.ok) {
+      toast.success("ثبت‌ نام با موفقیت انجام شد");
       router.push("/");
+    } else {
+      toast.error("این ایمیل قبلاً ثبت‌ نام شده است");
     }
-
-    console.log(data);
   };
 
   return (
@@ -55,7 +56,8 @@ export default function SignupPage() {
             placeholder="ایمیل"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            required
+            className="rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"         
           />
 
           <input
@@ -63,6 +65,7 @@ export default function SignupPage() {
             placeholder="رمز عبور"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+             required
             className="rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
           />
 
