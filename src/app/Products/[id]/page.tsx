@@ -1,3 +1,4 @@
+import BuyBtn from "@/components/Products/BuyBtn";
 import Image from "next/image";
 interface Product {
   _id: string;
@@ -95,9 +96,7 @@ export default async function ProductDetails({
           </div>
 
           {/* دکمه */}
-          <button className="w-full rounded-xl bg-blue-600 py-4 text-lg font-bold text-white transition hover:bg-blue-700  cursor-pointer">
-            افزودن به سبد خرید
-          </button>
+          <BuyBtn product={data}/>
         </div>
       </section>
     </main>

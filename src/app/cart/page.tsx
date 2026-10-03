@@ -33,8 +33,9 @@ export default function Cart() {
               <h2 className="font-bold text-gray-800">{c.name}</h2>
 
               <p className="text-lg font-semibold text-green-600">
-                {c.price.toLocaleString()} تومان
+                {(c.price * c.quantity).toLocaleString()} تومان
               </p>
+              <span className="bg-black rounded-full w-15 pr-2 text-white">{c.quantity} عدد</span>
             </div>
 
             {/* دکمه حذف */}
