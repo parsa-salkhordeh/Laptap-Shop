@@ -17,7 +17,7 @@ export default async function Products() {
   let data: Product[] = [];
 
   try {
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("https://laptap-shop-3.onrender.com/api/products");
     data = await res.json();
   } catch (error) {
     console.log(error);
