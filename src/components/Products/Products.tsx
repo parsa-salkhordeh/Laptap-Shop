@@ -9,6 +9,7 @@ interface Product {
   _id: string;
   name: string;
   price: number;
+  quantity:number;
 }
 
 export default async function Products() {

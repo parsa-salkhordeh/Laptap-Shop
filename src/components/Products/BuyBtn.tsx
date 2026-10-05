@@ -1,8 +1,14 @@
 "use client"
 import { ShopContext } from "@/context/ShopContext";
 import { useContext } from "react";
-
-export default function BuyBtn({product}) {
+interface Product {
+  image: string;
+  _id: string;
+  name: string;
+  price: number;
+  quantity:number
+}
+export default function BuyBtn({product}:{product:Product}) {
   const context = useContext(ShopContext);
   console.log(context)
   return (
