@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 laptop-shop
 
-## Getting Started
+یک فروشگاه آنلاین با MongoDB , NextJs , TypeScript
+هدف این پروژه، پیاده‌سازی یک فروشگاه مدرن با قابلیت مدیریت محصولات، سبد خرید، احراز هویت کاربران و ارتباط با دیتابیس است.
 
-First, run the development server:
+
+## تکنولوژی ها:
+
+* **Next.js** – ساخت صفحات و مدیریت Routing
+* **Next.js App Router** – ساختار صفحات و مسیرهای پروژه
+* **TypeScript** – Type Safety
+* **Tailwind CSS** – طراحی و استایل‌دهی
+* **MongoDB** – ذخیره اطلاعات محصولات و کاربران
+* **Context API** – مدیریت وضعیت سبد خرید
+* **Font Awesome** – آیکون‌های رابط کاربری
+* **React Hot Toast** – نمایش پیام‌های موفقیت و خطا
+* **bcryptjs** – Hash کردن رمز عبور کاربران
+* 
+
+## قابلیت ها
+
+*  نمایش محصولات لپ‌تاپ
+*  مشاهده جزئیات هر محصول
+*  اضافه کردن محصول به سبد خرید
+*  حذف محصول از سبد خرید
+*  مدیریت تعداد محصولات در سبد خرید
+*  نمایش Toast برای عملیات مختلف
+*  ثبت‌نام کاربران
+*  Hash کردن رمز عبور قبل از ذخیره در دیتابیس
+*  ذخیره اطلاعات در MongoDB
+*  طراحی Responsive برای موبایل و دسکتاپ
+*  صفحات مختلف مانند:
+
+  * Home
+  * Products
+  * Product Details
+  * Cart
+  * About Us
+  * Contact Us
+  * Sign Up
+  * 404 Not Found
+
+## ثبت‌ نام کاربران
+
+در حال حاضر بخش **Sign Up** پیاده‌سازی شده است.
+و بزودی پنل ادمین و **sign in** پیاده سازی میشوند
+اطلاعات کاربر از طریق API به سرور ارسال شده و در MongoDB ذخیره می‌شود.
+برای امنیت بیشتر، رمز عبور کاربران قبل از ذخیره شدن با `bcryptjs` Hash می‌شود.
+
+قابلیت‌های زیر در برنامه آینده پروژه قرار دارند:
+
+* Sign In
+* ثبت‌نام و ورود مستقیم با Google
+* Logout
+* Admin Panel
+
+
+## مفاهیم استفاده شده
+
+در این پروژه با مفاهیم مختلفی از **React** و **Next.js** کار شده است:
+
+* Server Components
+* Client Components
+* SSR
+* Dynamic Pages
+* API Routes
+* Context API
+* React Hooks
+* `useState`
+* `useContext`
+* Next Hooks
+* `useRouter`
+* Responsive Design
+
+
+
+
+## نصب و راه اندازی پروژه
+
+ابتدا پروژه را Clone کنید:
+
+```bash
+git clone https://github.com/parsa-salkhordeh/laptop-shop.git
+```
+
+وارد پوشه پروژه شوید:
+
+```bash
+cd laptop-shop
+```
+
+وابستگی‌ها را نصب کنید:
+
+```bash
+npm install
+```
+
+سپس فایل `.env.local` را ایجاد کرده و Connection String مربوط به MongoDB را قرار دهید:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+پروژه را اجرا کنید:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+سپس در مرورگر باز کنید:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## بزودی
 
-## Learn More
+قابلیت‌های برنامه‌ریزی‌شده برای نسخه‌های بعدی:
 
-To learn more about Next.js, take a look at the following resources:
+* Sign In
+* Google Authentication
+* Logout
+* Admin Panel
+* افزودن محصول توسط Admin
+* ویرایش محصولات
+* حذف محصولات توسط Admin
+* جستجوی محصولات
+* فیلتر و دسته‌بندی محصولات
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 توسعه‌دهنده
 
-## Deploy on Vercel
+**Parsa Salkhordeh**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
