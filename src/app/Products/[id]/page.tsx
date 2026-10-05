@@ -11,6 +11,7 @@ interface Product {
   storage: string; // for later
   screen: string;
   image: string;
+  quantity:number;
 }
 
 export default async function ProductDetails({
