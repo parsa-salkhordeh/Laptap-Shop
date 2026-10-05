@@ -21,7 +21,7 @@ export default async function ProductDetails({
 }) {
   const { id } = await params;
 
-  const res = await fetch(`http://localhost:3000/api/products/${id}`);
+  const res = await fetch(`https://laptap-shop-3.onrender.com/api/products/${id}`);
 
   if (!res.ok) {
     return <div className="font-bold text-center text-red-500">محصول پیدا نشد</div>;
