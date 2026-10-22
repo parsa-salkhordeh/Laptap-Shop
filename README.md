@@ -1,6 +1,8 @@
 # 💻 laptop-shop
 
 #GIF(https://jumpshare.com/share/pdKA15pQwsJekY9ssIoE)
+
+
 یک فروشگاه آنلاین با MongoDB , NextJs , TypeScript
 هدف این پروژه، پیاده‌سازی یک فروشگاه مدرن با قابلیت مدیریت محصولات، سبد خرید، احراز هویت کاربران و ارتباط با دیتابیس است.
 
